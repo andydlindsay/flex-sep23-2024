@@ -1,3 +1,3 @@
 # Table of Contents
 
-* [M01W01 - Objects in JS](/m01w01-1)
+* [M01W01 - Tech Talk and Curriculum Outline](/m01w01-1)
