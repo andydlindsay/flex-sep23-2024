@@ -11,7 +11,7 @@ const args = process.argv;
 // args.splice(0, 2);
 // const args = [];
 
-// const brandNewArray = args.slice(2);
+const brandNewArray = args.slice(2);
 
 // const brandNewArray = [ '2', '4', '6' ];
 // console.log(brandNewArray);
@@ -41,7 +41,7 @@ const args = process.argv;
 //   console.log(value);
 // }
 
-const brandNewArray = [ '2', '4', '6', '3.14', '-100' ];
+// const brandNewArray = [ '2', '4', '6', '3.14', '-100' ];
 
 let sum = 0;
 
@@ -56,4 +56,3 @@ for (const value of brandNewArray) {
 }
 
 console.log('sum', sum);
-
