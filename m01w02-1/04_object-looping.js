@@ -18,6 +18,7 @@ const house = {
   forSale: false,
 };
 
+// loop through the keys of the object using for..in
 for (const key in house) {
   console.log('key', key);
   console.log('value', house[key]);
