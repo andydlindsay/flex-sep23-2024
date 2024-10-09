@@ -9,44 +9,49 @@
 - [x] Mocha test runner
 - [x] What is TDD?
 
-### Types of Testing
-* manual testing => run the file and check the response
-* automated testing => when an app runs predefined tests for us
+### TDD
+- **T**est **D**riven **D**evelopment
+- Tests are written before the code is written
+- We use a process called Red-Green-Refactor
+- Red: The test is failing
+- Green: The test is passing
+- Refactor: Improve the existing code safe in the knowledge that the functionality is testable
+- BDD: **B**ehaviour **D**riven **D**evelopment
+  - Very similar to TDD, but the focus is more on the end user rather than the quality of the code under test
 
-### Assertion Library
-* bunch of helper functions that test actual vs expected
-* if they are equal, we get no output
-* if they are not equal, the library throws an error
+### Mocha
+- A testing framework
+- By default, looks in the `test` folder for test files to run
 
-### Node
-* an app for running JS
-* Chrome's JS intrepreter (V8)
-* wrapped it in a C++ app
-* added a bunch of optional packages
+### `module.exports` and `require`
+- We can export functions, objects, etc from a file using the `module.exports` object
+- You can add new keys to the `module.exports` object _or_ you can completely overwrite it with a function/object
 
-### Test Runner
-* automatically runs your tests
-* Mocha
-* NPM is built into Node
-* Node Package Manager
-* install other people's code
+```js
+// adding new keys to module.exports
+module.exports.myFunc = myFunc;
+module.exports.myOtherFunc = myOtherFunc;
 
-```bash
-# adds the package as a dependency
-npm install package-name
-
-# installs the package globally on your OS
-npm install --global package-name
-
-# install the package as a development dependency
-npm install --save-dev package-name
+// overwriting module.exports object
+module.exports = myFunc;
+// or
+module.exports = {
+  myFunc,
+  myOtherFunc
+};
 ```
 
-### package.json
-* details information about our project
-* and lists all dependencies
+- As you have previously seen, we can bring functions, objects, etc into a file using `require`
 
-### Test-driven Development
-* TDD
-* we write the tests BEFORE we write the code
-* red => green
+```js
+// basic require syntax
+const myFunc = require('./myFunc');
+
+// if the file exports an object, we can use ES6 destructuring
+const { myFunc } = require('./myFunc');
+```
+
+### Useful Links
+- [Node Modules](https://nodejs.org/docs/latest/api/modules.html)
+- [Node Wrapper Function](https://nodejs.org/api/modules.html#modules_the_module_wrapper)
+- [Mocha Docs](https://mochajs.org/)
