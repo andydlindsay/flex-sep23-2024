@@ -1,0 +1,24 @@
+{
+  "name": "testing-with-mocha",
+  "version": "0.5.0",
+  "description": "Having fun with testing and taking responsibility",
+  "main": "say-hello-test.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha.js",
+    "list": "ls -l"
+  },
+  "keywords": [
+    "testing",
+    "fun",
+    "tdd",
+    "mocha"
+  ],
+  "author": "Andy Lindsay",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.7.3"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
